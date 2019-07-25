@@ -100,3 +100,8 @@ For example, at a cost of 10 you are able to hash 10 passwords a second on an av
 ```python
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {/* Store hash in your db*/});
 ```
+### Hash and Compare Password Synchronously
+  Hashing synchronously is just as easy to do but can cause lag if using it server side with a high cost or with hashing done very often. Hashing with this method is as easy as calling 
+```python
+var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
+```
